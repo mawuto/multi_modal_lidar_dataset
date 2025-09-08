@@ -67,6 +67,52 @@ dataset/
 
 ---
 
-## 5) Contact
+## 5) ROS Topics
+
+### IndoorOffice1 & IndoorOffice2
+
+**Message types**
+- `geometry_msgs/PoseStamped`  
+- `sensor_msgs/Imu`   
+- `sensor_msgs/PointCloud2`  
+
+**Topics**
+- `/avia/livox/imu` — 13,461 msgs : `sensor_msgs/Imu`  
+- `/avia/livox/lidar` — 662 msgs : `sensor_msgs/PointCloud2`  
+- `/mid360/livox/imu` — 13,212 msgs : `sensor_msgs/Imu`  
+- `/mid360/livox/lidar` — 660 msgs : `sensor_msgs/PointCloud2`  
+- `/ouster/imu` — 8,257 msgs : `sensor_msgs/Imu`  
+- `/ouster/points` — 661 msgs : `sensor_msgs/PointCloud2`  
+- `/vrpn_client_node/unitree_b1/pose` — 7,664 msgs : `geometry_msgs/PoseStamped`  
+
+---
+
+### OutdoorRoad (full & cut sequences)
+
+**Message types**
+- `geometry_msgs/PoseStamped`  
+- `sensor_msgs/Imu`   
+- `sensor_msgs/PointCloud2`  
+
+**Topics**
+- `/avia/livox/imu` — 133,719 msgs : `sensor_msgs/Imu`  
+- `/avia/livox/lidar` — 6,573 msgs : `sensor_msgs/PointCloud2`  
+- `/gnss_pose` — 65,732 msgs : `geometry_msgs/PoseStamped`  
+- `/mid360/livox/imu` — 131,462 msgs : `sensor_msgs/Imu`  
+- `/mid360/livox/lidar` — 6,573 msgs : `sensor_msgs/PointCloud2`  
+- `/ouster/imu` — 82,162 msgs : `sensor_msgs/Imu`  
+- `/ouster/points` — 6,573 msgs : `sensor_msgs/PointCloud2`  
+
+---
+
+### Sensor Frequency Notes
+- `/ouster/points`: ~10 Hz  
+- `/ouster/imu`: ~100 Hz  
+- `/avia/livox/lidar`: 10 Hz  
+- `/avia/livox/imu`: ~200 Hz  
+- `/mid360/livox/lidar`: 10 Hz  
+- `/mid360/livox/imu`: ~200 Hz
+
+## 6) Contact
 
 Please open an issue or discussion on this repo for questions.
