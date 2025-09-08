@@ -1,17 +1,17 @@
 {
   "dataset/indoor/IndoorOffice1/IndoorOffice1_dataset.bag": {
-    "sha256": "TBD"
+    "cd4cd4290c10993086c1e63b2edc0a968333e686a24b8a195154749365fe2dae": "TBD"
   },
   "dataset/indoor/IndoorOffice2/IndoorOffice2_dataset.bag": {
-    "sha256": "TBD"
+    "aee8e03fc18b122c209ae9d4e272c38e26c3193fbc7a1843d92deb325bae413b": "TBD"
   },
   "dataset/outdoor/OutdoorRoad/OutdoorRoad_dataset.bag": {
-    "sha256": "TBD"
+    "71678d06a6db45cef4042d1b4124c3b16a48723720577d5af89ff32ae27d9bf1": "TBD"
   },
   "dataset/outdoor/OutdoorRoad-cut0/OutdoorRoad_cut0.bag": {
-    "sha256": "TBD"
+    "f12e1a37429533e158ff28c1bd0b9062a134a5ecfeeda044244b98c52862acf6": "TBD"
   },
   "dataset/outdoor/OutdoorRoad-cut1/OutdoorRoad_cut1.bag": {
-    "sha256": "TBD"
+    "75086390002340c013f1ca8fa02062522f2af286c3f479377850a85cda475799": "TBD"
   }
 }
