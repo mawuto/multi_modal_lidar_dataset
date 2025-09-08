@@ -1,0 +1,13 @@
+ground_truth: MoCap
+notes:
+- PTP sync used
+- Avia lacks per-point timestamps
+- Mid-360 has per-point timestamps
+topics:
+- /avia/livox/imu (200Hz)
+- /avia/livox/lidar (10Hz)
+- /mid360/livox/imu (200Hz)
+- /mid360/livox/lidar (10Hz)
+- /ouster/imu (100Hz)
+- /ouster/points (10Hz)
+- /vrpn_client_node/unitree_b1/pose

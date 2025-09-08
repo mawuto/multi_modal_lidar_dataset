@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite as below."
+type: dataset
+title: "Multi-Modal LiDAR Dataset (Avia, Mid-360, Ouster)"
+authors:
+  - family-names: "YourSurname"
+    given-names: "YourName"
+    affiliation: "YourAffiliation"
+repository-code: "https://github.com/Hasar12138/multi_modal_lidar_dataset"
+version: "0.1.0"
+date-released: "2025-09-08"

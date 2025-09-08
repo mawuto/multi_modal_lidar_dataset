@@ -1,0 +1,1 @@
+# Example script to list topics from a rosbag (ROS1/ROS2).
