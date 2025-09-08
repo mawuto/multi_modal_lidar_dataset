@@ -87,7 +87,7 @@ dataset/
 
 ---
 
-### OutdoorRoad (full & cut sequences)
+### OutdoorRoad
 
 **Message types**
 - `geometry_msgs/PoseStamped`  
