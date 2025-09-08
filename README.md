@@ -13,7 +13,6 @@ This repository hosts **documentation, download links, and baseline code** for a
 ## 1) Quick Links
 
 **Dataset Download (Baidu Netdisk):**
-
 - IndoorOffice1_dataset.bag — https://pan.baidu.com/s/1sAiaXva7OY0z7ILK0nIv1w (pwd: `ec2t`)
 - IndoorOffice2_dataset.bag — https://pan.baidu.com/s/1g64HCeztEmPRc-rdee_oew (pwd: `5yxp`)
 - OutdoorRoad_dataset.bag — https://pan.baidu.com/s/1O7MBU-5u8taKWxgpxwJJwQ (pwd: `uk1e`)
@@ -42,10 +41,32 @@ dataset/
 ## 3) Ground Truth
 
 - **Indoor:** MoCap (`/vrpn_client_node/unitree_b1/pose`)
-- **Outdoor:** GNSS‑RTK (`/gnss_pose`)
+- **Outdoor:** GNSS-RTK (`/gnss_pose`)
 
 ---
 
-## 4) Contact
+## 4) Verify Dataset Integrity
+
+1. Download bags from the links above.
+2. Place each `.bag` in its corresponding folder under `dataset/`:
+   - IndoorOffice1 → `dataset/indoor/IndoorOffice1/`
+   - IndoorOffice2 → `dataset/indoor/IndoorOffice2/`
+   - OutdoorRoad → `dataset/outdoor/OutdoorRoad/`
+   - OutdoorRoad-cut0 → `dataset/outdoor/OutdoorRoad-cut0/`
+   - OutdoorRoad-cut1 → `dataset/outdoor/OutdoorRoad-cut1/`
+3. Run verification (example for IndoorOffice1):
+   ```bash
+   cd dataset/indoor/IndoorOffice1
+   sha256sum -c IndoorOffice1.sha256
+   ```
+   Expected output:
+   ```
+   IndoorOffice1_dataset.bag: OK
+   ```
+   Repeat for the other sequences using their respective `.sha256` files.
+
+---
+
+## 5) Contact
 
 Please open an issue or discussion on this repo for questions.
