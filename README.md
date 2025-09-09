@@ -162,6 +162,44 @@ dataset/
 - `/mid360/livox/lidar`: 10 Hz  
 - `/mid360/livox/imu`: ~200 Hz
 
-## 6) Contact
+---
+
+## 7) Processing & Reproduction Pipelines
+
+See `docs/pipelines/README.md` for node graphs and screenshots.
+
+### Outdoor workflow
+1. Convert GNSS `/gnss_pose` (lat/lon) → `/odom` using `scripts/gnss2odom/gnss2odom.py`.  
+2. Convert Livox PointCloud2 → Livox custom message (external converter repo).  
+   - Avia + Mid360 require conversion.  
+   - Ouster can be used directly.  
+3. Run SLAM (e.g., FAST-LIO2).  
+4. Record `/odometry` (SLAM output) and `/odom` (GNSS ground truth).  
+
+### Indoor workflow
+1. Convert Livox PointCloud2 → Livox custom message.  
+2. Run SLAM (e.g., FAST-LIO2).  
+3. Record `/odometry` (SLAM output) and `/vrpn_client_node/unitree_b1/pose` (MoCap GT).  
+
+---
+
+## 8) Trajectory Export & Evaluation
+
+1. Export TUM files using `scripts/bag_tools/bag_tum.py`. Example:
+   ```bash
+   python3 scripts/bag_tools/bag_tum.py \
+     --odom_bag recorded.bag --odom_topic /odometry \
+     --gt_bag   recorded.bag --gt_topic /odom \
+     --odom_out odom.tum --gt_out gt.tum
+   ```
+2. Run evaluation with `evo_ape`:
+   ```bash
+   evo_ape tum --align gt.tum odom.tum \
+     --plot --plot_mode xyz -r trans_part --save_plot ape_trans.png
+   ```
+
+---
+
+## 9) Contact
 
 Please open an issue or discussion on this repo for questions.
