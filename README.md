@@ -200,6 +200,21 @@ See `docs/pipelines/README.md` for node graphs and screenshots.
 
 ---
 
-## 9) Contact
+## 9) Baseline Methods
+
+We tested several open-source SLAM and registration methods on this dataset:
+
+- **FAST-LIO2** – tightly coupled LiDAR-inertial odometry ([GitHub](https://github.com/hku-mars/FAST_LIO))  
+- **Faster-LIO** – optimized FAST-LIO variant ([GitHub](https://github.com/gaoxiang12/faster-lio))  
+- **S-FAST-LIO** – surfel-based LiDAR-inertial odometry ([GitHub](https://github.com/zlwang7/S-FAST_LIO))  
+- **FAST-LIO-SAM** – combines FAST-LIO’s front-end odometry with the loop closure and mapping backend of LIO-SAM ([GitHub](https://github.com/kahowang/FAST_LIO_SAM))  
+- **GLIM** – factor graph-based LiDAR-inertial mapping ([GitHub](https://github.com/koide3/glim))  
+- **KISS-ICP** – lightweight point-to-point ICP odometry, efficient and IMU-free (ROS1 compatible v0.3.0) ([GitHub](https://github.com/PRBonn/kiss-icp))  
+- **GenZ-ICP** – generalized ICP variant with multi-scale feature integration for robustness ([GitHub](https://github.com/cocel-postech/genz-icp))  
+- **Open3D-GICP** – Open3D’s implementation of Generalized ICP, integrated for ROS via `open3d_catkin` ([GitHub](https://github.com/leggedrobotics/open3d_slam/tree/master/open3d_catkin))  
+
+Results and comparisons are provided under `docs/results/`.
+
+## 10) Contact
 
 Please open an issue or discussion on this repo for questions.
