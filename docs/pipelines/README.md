@@ -8,8 +8,8 @@ It covers preprocessing, running SLAM, exporting trajectories, and evaluating wi
 
 ### 1.1 GNSS Conversion
 - The outdoor ground truth is published on `/gnss_pose` in **latitude/longitude**.
-- build the scripts/gnss2odom/gnss2odom.py code into a catkin package (gnss2odom_converter).
-- Use the built package to convert the gnss_pose into ENU coordinates (`/odom`). 
+- build the script located in `/gnss2odom/gnss2odom.py` code into a catkin package (gnss2odom_converter).
+- Use the built package to convert the gnss_pose into ENU coordinates (`/odom`).
 
 ```bash
 rosrun gnss2odom_converter gnss2odom.py
@@ -18,11 +18,12 @@ rosrun gnss2odom_converter gnss2odom.py
 -	Output: /odom (ENU).
 
 **Note:**
-- Without this conversion, trajectories will be incorrectly scaled.
+- Without this conversion, trajectories will be incorrectly scaled for outdoor data.
 ---
 
 ### 1.2 Livox PointCloud Conversion
-- The **FAST-LIO family** requires livox_ros_driver/CustomMsg.
+- The **FAST-LIO family** requires livox_ros_driver/CustomMsg for **Avia** and **Mid-360**.
+- Costumed Conversion package is provided in a separate repo: [link to be added])
 - Convert sensor_msgs/PointCloud2 → CustomMsg for **Avia** and **Mid-360**:
 
 ```bash
@@ -30,16 +31,13 @@ roslaunch pointcloud2_to_custommsg_converter converter.launch
 ```
 
 **Note:**
-- Avia + Mid-360: conversion required
-- Ouster (/ouster/points): use directly
-- (Converter will be provided in a separate repo: [link to be added])
-
----
+- Ouster: Use pointcloud2 directly.
+--
 
 ### 1.3 Run SLAM
 
 - Run Fast_lio2, or other Fast_lio families with the converted inputs.
-- Excepted GLIM which work directly with PointCloud2.
+- Excepted GLIM which work directly with PointCloud2(for all three sensors).
 
 - Example FAST-LIO2 launch: (replace topics as needed):
 
@@ -86,7 +84,7 @@ Ground truth is provided by MoCap (/vrpn_client_node/unitree_b1/pose).
 
 ### 2.2 Run SLAM
 - Run Fast_lio2, or other Fast_lio families with the converted inputs.
-- Excepted GLIM which work directly with PointCloud2.
+- Excepted GLIM which work directly with PointCloud2(for all three sensors).
 
 ### 2.3 Record Outputs
 Record both SLAM and ground truth:
