@@ -8,30 +8,30 @@ It covers preprocessing, running SLAM, exporting trajectories, and evaluating wi
 
 ### 1.1 GNSS Conversion
 The outdoor ground truth is published on `/gnss_pose` in **latitude/longitude**.  
-Convert to ENU coordinates (`/odom`) using the provided script:
+Convert to ENU coordinates (`/odom`) using the provided script in "scripts/gnss2odom/gnss2odom.py"
 
 ```bash
 rosrun gnss2odom_converter gnss2odom.py
 ```
-•	Input: /gnss_pose (lat/lon)
-•	Output: /odom (ENU)
+-	Input: /gnss_pose (lat/lon).
+-	Output: /odom (ENU).
 
-**Note:** Without this conversion, trajectories will be incorrectly scaled.
+**Note:**
+- Without this conversion, trajectories will be incorrectly scaled.
 ---
 
 ### 1.2 Livox PointCloud Conversion
-The **FAST-LIO family** requires livox_ros_driver/CustomMsg.
-Convert sensor_msgs/PointCloud2 → CustomMsg for **Avia** and **Mid-360**:
+- The **FAST-LIO family** requires livox_ros_driver/CustomMsg.
+- Convert sensor_msgs/PointCloud2 → CustomMsg for **Avia** and **Mid-360**:
 
 ```bash
 roslaunch pointcloud2_to_custommsg_converter converter.launch
 ```
 
 **Note:**
-•	Avia + Mid-360: conversion required
-•	Ouster (/ouster/points): use directly
-
-(Converter will be provided in a separate repo: [link to be added])
+- Avia + Mid-360: conversion required
+- Ouster (/ouster/points): use directly
+- (Converter will be provided in a separate repo: [link to be added])
 
 ---
 
