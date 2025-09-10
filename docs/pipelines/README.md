@@ -1,36 +1,48 @@
 # Processing & Reproduction Pipelines
 
-This document describes how to reproduce SLAM/ICP experiments with the **Multi-Modal LiDAR Dataset**, including node graphs, conversion steps, and evaluation workflows.  
-
+This document provides detailed steps to reproduce **SLAM/ICP experiments** with the Multi-Modal LiDAR Dataset.  
+It covers preprocessing, running SLAM, exporting trajectories, and evaluating with `evo`.
 ---
 
 ## 1) Outdoor Workflow
 
 ### 1.1 GNSS Conversion
-The original outdoor ground truth is in **latitude/longitude** format on topic `/gnss_pose`.  
-After building the `scripts/gnss2odom/` code into a catkin package (`gnss2odom_converter`), convert to `/odom` (ENU coordinates) using:
+The outdoor ground truth is published on `/gnss_pose` in **latitude/longitude**.  
+Convert to ENU coordinates (`/odom`) using the provided script:
 
 ```bash
 rosrun gnss2odom_converter gnss2odom.py
 ```
+•	Input: /gnss_pose (lat/lon)
+•	Output: /odom (ENU)
+
+**Note:** Without this conversion, trajectories will be incorrectly scaled.
 ---
 
 ### 1.2 Livox PointCloud Conversion
-The **FAST-LIO family** requires Livox CustomMsg format.
-For **Avia** and **Mid-360**, convert `sensor_msgs/PointCloud2` to `livox_ros_driver/CustomMsg` with:
+The **FAST-LIO family** requires livox_ros_driver/CustomMsg.
+Convert sensor_msgs/PointCloud2 → CustomMsg for **Avia** and **Mid-360**:
 
 ```bash
 roslaunch pointcloud2_to_custommsg_converter converter.launch
 ```
 
-**Note:** Ouster `/ouster/points` can be used directly (no conversion required).
-**Note:** The pointcloud2_to_custommsg_converter will be provided in a separate repo: [link will be added]
+**Note:**
+•	Avia + Mid-360: conversion required
+•	Ouster (/ouster/points): use directly
+
+(Converter will be provided in a separate repo: [link to be added])
 
 ---
 
-### 1.3 Run FAST-LIO2
-Example launch (replace topics as needed):
+### 1.3 Run SLAM
+Example FAST-LIO2 launch: (replace topics as needed):
 
+Simplified usage:
+```bash
+roslaunch fast_lio mapping_ouster.launch
+```
+Advance CLI:
 ```bash
 roslaunch fast_lio mapping.launch \
     lidar_points:=/ouster/points \
@@ -52,7 +64,7 @@ Node graph example (Avia with Faster-LIO):
 ---
 
 ### 1.4 Record Outputs
-Record both SLAM and ground truth:
+Save SLAM odometry and converted GNSS ground truth:
 
 ```bash
 rosbag record /odometry /odom
@@ -61,14 +73,15 @@ rosbag record /odometry /odom
 
 ## 2) Indoor Workflow
 
-For indoor data, ground truth is MoCap from `/vrpn_client_node/unitree_b1/pose`.
+Ground truth is provided by MoCap (/vrpn_client_node/unitree_b1/pose).
 
 ### 2.1 Conversion
-- Avia + Mid-360: Convert `PointCloud2` → Livox CustomMsg.  
+- Avia + Mid-360: Convert PointCloud2 → Livox CustomMsg.
 - Ouster: Use directly.  
 
 ### 2.2 Run SLAM
-Run FAST-LIO2/Faster-LIO as above.  
+Run Faster-LIO, or other baselines with the converted inputs.
+Excepted GLIM which work directly with PointCloud2.
 
 ### 2.3 Record Outputs
 Record both SLAM and ground truth:
@@ -83,13 +96,23 @@ rosbag record /odometry /vrpn_client_node/unitree_b1/pose
 Use the helper script scripts/bag_tools/bag_tum.py to export TUM trajectories.
 Run this on the rosbag you recorded during SLAM (not the raw dataset bag):
 
+Advanced CLI usage:
+
 ```bash
 python3 scripts/bag_tools/bag_tum.py \
   --odom_bag recorded.bag --odom_topic /odometry \
   --gt_bag recorded.bag --gt_topic /odom \
   --odom_out odom.tum --gt_out gt.tum
 ```
-(For indoor, set `--gt_topic /vrpn_client_node/unitree_b1/pose`.)
+For indoor data, set --gt_topic /vrpn_client_node/unitree_b1/pose.
+
+Simplified usage:
+
+Edit directly rosbag information and topics in bag_tum.py and run:
+
+```bash
+python3 scripts/bag_tools/bag_tum.py
+```
 
 ---
 

@@ -157,21 +157,11 @@ dataset/
 
 ## 6) Processing & Reproduction Pipelines
 
-See `docs/pipelines/README.md` for node graphs and reproducibility details
+See [docs/pipelines/README.md](docs/pipelines/README.md) for detailed steps, commands, and node graphs.
 
-### Outdoor workflow
-1. Convert GNSS `/gnss_pose` (lat/lon) → `/odom` using `scripts/gnss2odom/gnss2odom.py`.  
-2. Convert Livox PointCloud2 → Livox custom message (external converter repo).  
-   - Avia + Mid360 require conversion.  
-   - Ouster can be used directly.  
-3. Run SLAM (e.g., FAST-LIO2).  
-4. Record `/odometry` (SLAM output) and `/odom` (GNSS ground truth).  
-
-### Indoor workflow
-1. Convert Livox PointCloud2 → Livox custom message.  
-2. Run SLAM (e.g., FAST-LIO2).  
-3. Record `/odometry` (SLAM output) and `/vrpn_client_node/unitree_b1/pose` (MoCap GT).  
-
+**Quick overview:**
+- Outdoor: GNSS→odom conversion, Livox conversion, run SLAM, record odometry + GNSS.
+- Indoor: Livox conversion, run SLAM, record odometry + MoCap.
 ---
 
 ## 7) Trajectory Export & Evaluation
