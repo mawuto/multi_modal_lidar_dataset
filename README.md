@@ -197,8 +197,60 @@ We tested several open-source SLAM and registration methods on this dataset:
 - **GenZ-ICP** – generalized ICP variant with multi-scale feature integration for robustness ([GitHub](https://github.com/cocel-postech/genz-icp))  
 - **Open3D-GICP** – Open3D’s implementation of Generalized ICP, integrated for ROS via `open3d_catkin` ([GitHub](https://github.com/leggedrobotics/open3d_slam/tree/master/open3d_catkin))  
 
-Results and comparisons are provided under `docs/results/`.
+---
 
-## 9) Contact
+## 9) Results & Visualizations
+
+### Quantitative Results
+SLAM methods (APE RMSE, mean ± std) on indoor and outdoor datasets:
+
+![SLAM Results](docs/pipelines/img/SLAM Experimentals Results.png)
+
+ICP-based methods (APE RMSE, mean ± std):
+
+![ICP Results](docs/pipelines/img/Icps_Experimental_results.png)
+
+---
+
+### Trajectory Alignments
+Indoor and outdoor ground-truth vs estimated trajectories:
+
+![Ground Truth Paths](docs/pipelines/img/ground_truth paths collections.png)
+
+---
+
+### Example Outdoor SLAM Runs
+FAST-LIO2:
+
+![FAST-LIO2](docs/pipelines/img/Fast_lio2_outdoor.png)
+
+Faster-LIO:
+
+![Faster-LIO](docs/pipelines/img/Faster_lio.jpeg)
+
+S-FAST-LIO:
+
+![S-FAST-LIO](docs/pipelines/img/S_fast_lio_outdoor.jpeg)
+
+FAST-LIO-SAM:
+
+![FAST-LIO-SAM](docs/pipelines/img/Fast_lio_sam_outdoor.jpeg)
+
+GLIM:
+
+![GLIM](docs/pipelines/img/Glim_outdoor.png)
+
+---
+
+### Data Collection Platform
+Robot and sensors setup:
+
+![Platform](docs/pipelines/img/data_collection_platform.png)
+
+Calibration diagram:
+
+![Calibration](docs/pipelines/img/data collection platform calibration.png)
+
+## 10) Contact
 
 Please open an issue or discussion on this repo for questions.
