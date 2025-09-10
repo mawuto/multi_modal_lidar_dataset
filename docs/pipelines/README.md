@@ -7,8 +7,9 @@ It covers preprocessing, running SLAM, exporting trajectories, and evaluating wi
 ## 1) Outdoor Workflow
 
 ### 1.1 GNSS Conversion
-- The outdoor ground truth is published on `/gnss_pose` in **latitude/longitude**.  
-- Convert to ENU coordinates (`/odom`) using the provided script in "scripts/gnss2odom/gnss2odom.py"
+- The outdoor ground truth is published on `/gnss_pose` in **latitude/longitude**.
+- build the scripts/gnss2odom/gnss2odom.py code into a catkin package (gnss2odom_converter).
+- Use the built package to convert the gnss_pose into ENU coordinates (`/odom`). 
 
 ```bash
 rosrun gnss2odom_converter gnss2odom.py
