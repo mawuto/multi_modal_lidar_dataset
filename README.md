@@ -204,7 +204,7 @@ We tested several open-source SLAM and registration methods on this dataset:
 ### Quantitative Results
 SLAM methods (APE RMSE, mean ± std) on indoor and outdoor datasets:
 
-![SLAM Results](docs/pipelines/img/SLAM Experimentals Results.png)
+![SLAM Results](docs/pipelines/img/SLAM_Experimentals_Results.png)
 
 ICP-based methods (APE RMSE, mean ± std):
 
@@ -215,7 +215,7 @@ ICP-based methods (APE RMSE, mean ± std):
 ### Trajectory Alignments
 Indoor and outdoor ground-truth vs estimated trajectories:
 
-![Ground Truth Paths](docs/pipelines/img/ground_truth paths collections.png)
+![Ground Truth Paths](docs/pipelines/img/ground_truth_paths_collections.png)
 
 ---
 
@@ -226,15 +226,15 @@ FAST-LIO2:
 
 Faster-LIO:
 
-![Faster-LIO](docs/pipelines/img/Faster_lio.jpeg)
+![Faster-LIO](docs/pipelines/img/Faster_lio.png)
 
 S-FAST-LIO:
 
-![S-FAST-LIO](docs/pipelines/img/S_fast_lio_outdoor.jpeg)
+![S-FAST-LIO](docs/pipelines/img/S_fast_lio_outdoor.png)
 
 FAST-LIO-SAM:
 
-![FAST-LIO-SAM](docs/pipelines/img/Fast_lio_sam_outdoor.jpeg)
+![FAST-LIO-SAM](docs/pipelines/img/Fast_lio_sam_outdoor.png)
 
 GLIM:
 
@@ -249,7 +249,7 @@ Robot and sensors setup:
 
 Calibration diagram:
 
-![Calibration](docs/pipelines/img/data collection platform calibration.png)
+![Calibration](docs/pipelines/img/data_collection_platform_calibration.png)
 
 ## 10) Contact
 
