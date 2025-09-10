@@ -9,8 +9,17 @@ This repository hosts **documentation, download links, and baseline code** for a
 - **Ouster OS0-128** (spinning)
 
 ---
+### 1) Data Collection Platform
+Robot and sensors setup:
 
-## 1) Quick Links
+<p align="center">
+  <img src="docs/pipelines/img/data_collection_platform.png" alt="Platform" width="48%"/>
+  <img src="docs/pipelines/img/data_collection_platform_calibration.png" alt="Calibration" width="48%"/>
+</p>
+
+---
+
+## 2) Quick Links
 
 **Dataset Download (Baidu Netdisk):**
 - IndoorOffice1_dataset.bag — https://pan.baidu.com/s/1sAiaXva7OY0z7ILK0nIv1w (pwd: `ec2t`)
@@ -18,16 +27,6 @@ This repository hosts **documentation, download links, and baseline code** for a
 - OutdoorRoad_dataset.bag — https://pan.baidu.com/s/1O7MBU-5u8taKWxgpxwJJwQ (pwd: `uk1e`)
 - OutdoorRoad_cut0.bag — https://pan.baidu.com/s/1D3BiAND8qwbKwoCiSFW0sA (pwd: `eyu9`)
 - OutdoorRoad_cut1.bag — https://pan.baidu.com/s/1np_ye1Wt1Sucwv5JamCvmA (pwd: `6xsa`)
-
----
-
-### 2) Data Collection Platform
-Robot and sensors setup:
-
-<p align="center">
-  <img src="docs/pipelines/img/data_collection_platform.png" alt="Platform" width="48%"/>
-  <img src="docs/pipelines/img/data_collection_platform_calibration.png" alt="Calibration" width="48%"/>
-</p>
 
 ---
 
@@ -229,13 +228,13 @@ Indoor and outdoor designated ground-truth paths of all the collected data seque
 
 ### Example Outdoor SLAM Runs
 <p align="center">
-  <img src="docs/pipelines/img/Fast_lio2_outdoor.png" alt="FAST-LIO2" width="45%"/>
   <img src="docs/pipelines/img/Faster_lio.png" alt="Faster-LIO" width="45%"/>
+  <img src="docs/pipelines/img/Fast_lio_sam_outdoor.png" alt="FAST-LIO-SAM" width="45%"/>
 </p>
 
 <p align="center">
   <img src="docs/pipelines/img/S_fast_lio_outdoor.png" alt="S-FAST-LIO" width="45%"/>
-  <img src="docs/pipelines/img/Fast_lio_sam_outdoor.png" alt="FAST-LIO-SAM" width="45%"/>
+  <img src="docs/pipelines/img/Fast_lio2_outdoor.png" alt="FAST-LIO2" width="45%"/>
 </p>
 
 <p align="center">
