@@ -21,31 +21,17 @@ This repository hosts **documentation, download links, and baseline code** for a
 
 ---
 
-## 2) Dataset Layout
+### 2) Data Collection Platform
+Robot and sensors setup:
 
-Each sequence provides synchronized rosbags and metadata:
-
-```
-dataset/
-  indoor/
-    IndoorOffice1/
-    IndoorOffice2/
-  outdoor/
-    OutdoorRoad/
-    OutdoorRoad-cut0/
-    OutdoorRoad-cut1/
-```
+<p align="center">
+  <img src="docs/pipelines/img/data_collection_platform.png" alt="Platform" width="48%"/>
+  <img src="docs/pipelines/img/data_collection_platform_calibration.png" alt="Calibration" width="48%"/>
+</p>
 
 ---
 
-## 3) Ground Truth
-
-- **Indoor:** MoCap (`/vrpn_client_node/unitree_b1/pose`)
-- **Outdoor:** GNSS-RTK (`/gnss_pose`)
-
----
-
-## 4) Verify Dataset Integrity
+## 3) Verify Dataset Integrity
 
 1. Download bags from the links above.
 2. Place each `.bag` in its corresponding folder under `dataset/`:
@@ -65,6 +51,21 @@ dataset/
    ```
    Repeat for the other sequences using their respective `.sha256` files.
 
+---
+## 4) Dataset Layout
+
+Each sequence provides synchronized rosbags and metadata:
+
+```
+dataset/
+  indoor/
+    IndoorOffice1/
+    IndoorOffice2/
+  outdoor/
+    OutdoorRoad/
+    OutdoorRoad-cut0/
+    OutdoorRoad-cut1/
+```
 ---
 
 ## 5) ROS Topics
@@ -139,6 +140,13 @@ dataset/
 
 ---
 
+## Ground Truth
+
+- **Indoor:** MoCap (`/vrpn_client_node/unitree_b1/pose`)
+- **Outdoor:** GNSS-RTK (`/gnss_pose`)
+
+---
+
 ### Sensor Frequency Notes
 - `/ouster/points`: ~10 Hz  
 - `/ouster/imu`: ~100 Hz  
@@ -150,7 +158,7 @@ dataset/
 
 ## 6) Processing & Reproduction Pipelines
 
-See `docs/pipelines/README.md` for node graphs and screenshots.
+See `docs/pipelines/README.md` for node graphs and reproducibility details
 
 ### Outdoor workflow
 1. Convert GNSS `/gnss_pose` (lat/lon) → `/odom` using `scripts/gnss2odom/gnss2odom.py`.  
@@ -213,43 +221,27 @@ ICP-based methods (APE RMSE, mean ± std):
 ---
 
 ### Trajectory Alignments
-Indoor and outdoor ground-truth vs estimated trajectories:
+Indoor and outdoor designated ground-truth paths of all the collected data sequences:
 
 ![Ground Truth Paths](docs/pipelines/img/ground_truth_paths_collections.png)
 
 ---
 
 ### Example Outdoor SLAM Runs
-FAST-LIO2:
+<p align="center">
+  <img src="docs/pipelines/img/Fast_lio2_outdoor.png" alt="FAST-LIO2" width="45%"/>
+  <img src="docs/pipelines/img/Faster_lio.png" alt="Faster-LIO" width="45%"/>
+</p>
 
-![FAST-LIO2](docs/pipelines/img/Fast_lio2_outdoor.png)
+<p align="center">
+  <img src="docs/pipelines/img/S_fast_lio_outdoor.png" alt="S-FAST-LIO" width="45%"/>
+  <img src="docs/pipelines/img/Fast_lio_sam_outdoor.png" alt="FAST-LIO-SAM" width="45%"/>
+</p>
 
-Faster-LIO:
-
-![Faster-LIO](docs/pipelines/img/Faster_lio.png)
-
-S-FAST-LIO:
-
-![S-FAST-LIO](docs/pipelines/img/S_fast_lio_outdoor.png)
-
-FAST-LIO-SAM:
-
-![FAST-LIO-SAM](docs/pipelines/img/Fast_lio_sam_outdoor.png)
-
-GLIM:
-
-![GLIM](docs/pipelines/img/Glim_outdoor.png)
-
+<p align="center">
+  <img src="docs/pipelines/img/Glim_outdoor.png" alt="GLIM" width="45%"/>
+</p>
 ---
-
-### Data Collection Platform
-Robot and sensors setup:
-
-![Platform](docs/pipelines/img/data_collection_platform.png)
-
-Calibration diagram:
-
-![Calibration](docs/pipelines/img/data_collection_platform_calibration.png)
 
 ## 10) Contact
 
