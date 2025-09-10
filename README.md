@@ -69,88 +69,73 @@ dataset/
 
 ## 5) ROS Topics
 
-### IndoorOffice1
+### IndoorOffice1 (4.47GB)
 
-**Message types**
-- `geometry_msgs/PoseStamped`  
-- `sensor_msgs/Imu`   
-- `sensor_msgs/PointCloud2`  
-
-**Topics**
-- `/avia/livox/imu` — 13,461 msgs : `sensor_msgs/Imu`  
-- `/avia/livox/lidar` — 662 msgs : `sensor_msgs/PointCloud2`  
-- `/mid360/livox/imu` — 13,212 msgs : `sensor_msgs/Imu`  
-- `/mid360/livox/lidar` — 660 msgs : `sensor_msgs/PointCloud2`  
-- `/ouster/imu` — 8,257 msgs : `sensor_msgs/Imu`  
-- `/ouster/points` — 661 msgs : `sensor_msgs/PointCloud2`  
-- `/vrpn_client_node/unitree_b1/pose` — 7,664 msgs : `geometry_msgs/PoseStamped`  
-
-
-### IndoorOffice2
-
-**Message types**
-- `geometry_msgs/PoseStamped`  
-- `sensor_msgs/Imu`   
-- `sensor_msgs/PointCloud2`  
-
-**Topics**
-- `/avia/livox/imu` — 19,449 msgs : `sensor_msgs/Imu`  
-- `/avia/livox/lidar` — 957 msgs : `sensor_msgs/PointCloud2`  
-- `/mid360/livox/imu` — 19,124 msgs : `sensor_msgs/Imu`  
-- `/mid360/livox/lidar` — 957 msgs : `sensor_msgs/PointCloud2`  
-- `/ouster/imu` — 11,939 msgs : `sensor_msgs/Imu`  
-- `/ouster/points` — 955 msgs : `sensor_msgs/PointCloud2`  
-- `/vrpn_client_node/unitree_b1/pose` — 8,513 msgs : `geometry_msgs/PoseStamped`
+| Topic                                | #Msgs  | Type                       |
+|--------------------------------------|--------|----------------------------|
+| /avia/livox/imu                      | 13,461 | sensor_msgs/Imu            |
+| /avia/livox/lidar                    |    662 | sensor_msgs/PointCloud2    |
+| /mid360/livox/imu                    | 13,212 | sensor_msgs/Imu            |
+| /mid360/livox/lidar                  |    660 | sensor_msgs/PointCloud2    |
+| /ouster/imu                          |  8,257 | sensor_msgs/Imu            |
+| /ouster/points                       |    661 | sensor_msgs/PointCloud2    |
+| /vrpn_client_node/unitree_b1/pose    |  7,664 | geometry_msgs/PoseStamped  |
 
 ---
-### OutdoorRoad
 
-**Message types**
-- `geometry_msgs/PoseStamped`  
-- `sensor_msgs/Imu`   
-- `sensor_msgs/PointCloud2`  
+### IndoorOffice2 (6.46GB)
 
-**Topics**
-- `/avia/livox/imu` — 133,719 msgs : `sensor_msgs/Imu`  
-- `/avia/livox/lidar` — 6,573 msgs : `sensor_msgs/PointCloud2`  
-- `/gnss_pose` — 65,732 msgs : `geometry_msgs/PoseStamped`  
-- `/mid360/livox/imu` — 131,462 msgs : `sensor_msgs/Imu`  
-- `/mid360/livox/lidar` — 6,573 msgs : `sensor_msgs/PointCloud2`  
-- `/ouster/imu` — 82,162 msgs : `sensor_msgs/Imu`  
-- `/ouster/points` — 6,573 msgs : `sensor_msgs/PointCloud2`
+| Topic                                | #Msgs  | Type                       |
+|--------------------------------------|--------|----------------------------|
+| /avia/livox/imu                      | 19,449 | sensor_msgs/Imu            |
+| /avia/livox/lidar                    |    957 | sensor_msgs/PointCloud2    |
+| /mid360/livox/imu                    | 19,124 | sensor_msgs/Imu            |
+| /mid360/livox/lidar                  |    957 | sensor_msgs/PointCloud2    |
+| /ouster/imu                          | 11,939 | sensor_msgs/Imu            |
+| /ouster/points                       |    955 | sensor_msgs/PointCloud2    |
+| /vrpn_client_node/unitree_b1/pose    |  8,513 | geometry_msgs/PoseStamped  |
 
-### OutdoorRoad_cut0
+---
 
-**Message types**
-- `geometry_msgs/PoseStamped`  
-- `sensor_msgs/Imu`   
-- `sensor_msgs/PointCloud2`  
+### OutdoorRoad (44.48GB)
 
-**Topics**
-- `/avia/livox/imu` — 13,429 msgs : `sensor_msgs/Imu`  
-- `/avia/livox/lidar` — 660 msgs : `sensor_msgs/PointCloud2`  
-- `/gnss_pose` — 6,602 msgs : `geometry_msgs/PoseStamped`  
-- `/mid360/livox/imu` — 13,200 msgs : `sensor_msgs/Imu`  
-- `/mid360/livox/lidar` — 660 msgs : `sensor_msgs/PointCloud2`  
-- `/ouster/imu` — 8,249 msgs  : `sensor_msgs/Imu`  
-- `/ouster/points` — 660 msgs : `sensor_msgs/PointCloud2`  
+| Topic               | #Msgs   | Type                      |
+|---------------------|---------|---------------------------|
+| /avia/livox/imu     | 133,719 | sensor_msgs/Imu           |
+| /avia/livox/lidar   |   6,573 | sensor_msgs/PointCloud2   |
+| /gnss_pose          |  65,732 | geometry_msgs/PoseStamped |
+| /mid360/livox/imu   | 131,462 | sensor_msgs/Imu           |
+| /mid360/livox/lidar |   6,573 | sensor_msgs/PointCloud2   |
+| /ouster/imu         |  82,162 | sensor_msgs/Imu           |
+| /ouster/points      |   6,573 | sensor_msgs/PointCloud2   |
 
+---
 
-### OutdoorRoad_cut1
+### OutdoorRoad_cut0 (4.47GB)
 
-**Message types**
-- `geometry_msgs/PoseStamped`  
-- `sensor_msgs/Imu`   
-- `sensor_msgs/PointCloud2`  
+| Topic               | #Msgs  | Type                      |
+|---------------------|--------|---------------------------|
+| /avia/livox/imu     | 13,429 | sensor_msgs/Imu           |
+| /avia/livox/lidar   |    660 | sensor_msgs/PointCloud2   |
+| /gnss_pose          |  6,602 | geometry_msgs/PoseStamped |
+| /mid360/livox/imu   | 13,200 | sensor_msgs/Imu           |
+| /mid360/livox/lidar |    660 | sensor_msgs/PointCloud2   |
+| /ouster/imu         |  8,249 | sensor_msgs/Imu           |
+| /ouster/points      |    660 | sensor_msgs/PointCloud2   |
 
-**Topics**
-- `/avia/livox/imu` — 9,214 msgs : `sensor_msgs/Imu`  
-- `/avia/livox/lidar` — 453 msgs : `sensor_msgs/PointCloud2`  
-- `/gnss_pose` — 4,528 msgs : `geometry_msgs/PoseStamped`  
-- `/mid360/livox/imu` — 9,055 msgs : `sensor_msgs/Imu`  
-- `/mid360/livox/lidar` — 453 msgs : `sensor_msgs/PointCloud2`  
-- `/ouster/imu` — 5,659 msgs : `sensor_msgs/Imu`  
-- `/ouster/points` — 453 msgs : `sensor_msgs/PointCloud2`
+---
+
+### OutdoorRoad_cut1 (3.07GB)
+
+| Topic               | #Msgs | Type                      |
+|---------------------|-------|---------------------------|
+| /avia/livox/imu     | 9,214 | sensor_msgs/Imu           |
+| /avia/livox/lidar   |   453 | sensor_msgs/PointCloud2   |
+| /gnss_pose          | 4,528 | geometry_msgs/PoseStamped |
+| /mid360/livox/imu   | 9,055 | sensor_msgs/Imu           |
+| /mid360/livox/lidar |   453 | sensor_msgs/PointCloud2   |
+| /ouster/imu         | 5,659 | sensor_msgs/Imu           |
+| /ouster/points      |   453 | sensor_msgs/PointCloud2   |
 
 ---
 
@@ -160,11 +145,10 @@ dataset/
 - `/avia/livox/lidar`: 10 Hz  
 - `/avia/livox/imu`: ~200 Hz  
 - `/mid360/livox/lidar`: 10 Hz  
-- `/mid360/livox/imu`: ~200 Hz
-
+- `/mid360/livox/imu`: ~200 Hz  
 ---
 
-## 7) Processing & Reproduction Pipelines
+## 6) Processing & Reproduction Pipelines
 
 See `docs/pipelines/README.md` for node graphs and screenshots.
 
@@ -183,7 +167,7 @@ See `docs/pipelines/README.md` for node graphs and screenshots.
 
 ---
 
-## 8) Trajectory Export & Evaluation
+## 7) Trajectory Export & Evaluation
 
 1. Export TUM files using `scripts/bag_tools/bag_tum.py`. Example:
    ```bash
@@ -200,7 +184,7 @@ See `docs/pipelines/README.md` for node graphs and screenshots.
 
 ---
 
-## 9) Baseline Methods
+## 8) Baseline Methods
 
 We tested several open-source SLAM and registration methods on this dataset:
 
@@ -215,6 +199,6 @@ We tested several open-source SLAM and registration methods on this dataset:
 
 Results and comparisons are provided under `docs/results/`.
 
-## 10) Contact
+## 9) Contact
 
 Please open an issue or discussion on this repo for questions.
