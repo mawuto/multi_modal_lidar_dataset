@@ -7,8 +7,8 @@ It covers preprocessing, running SLAM, exporting trajectories, and evaluating wi
 ## 1) Outdoor Workflow
 
 ### 1.1 GNSS Conversion
-The outdoor ground truth is published on `/gnss_pose` in **latitude/longitude**.  
-Convert to ENU coordinates (`/odom`) using the provided script in "scripts/gnss2odom/gnss2odom.py"
+- The outdoor ground truth is published on `/gnss_pose` in **latitude/longitude**.  
+- Convert to ENU coordinates (`/odom`) using the provided script in "scripts/gnss2odom/gnss2odom.py"
 
 ```bash
 rosrun gnss2odom_converter gnss2odom.py
@@ -36,7 +36,11 @@ roslaunch pointcloud2_to_custommsg_converter converter.launch
 ---
 
 ### 1.3 Run SLAM
-Example FAST-LIO2 launch: (replace topics as needed):
+
+- Run Fast_lio2, or other Fast_lio families with the converted inputs.
+- Excepted GLIM which work directly with PointCloud2.
+
+- Example FAST-LIO2 launch: (replace topics as needed):
 
 Simplified usage:
 ```bash
@@ -69,7 +73,7 @@ Save SLAM odometry and converted GNSS ground truth:
 ```bash
 rosbag record /odometry /odom
 ```
--
+
 
 ## 2) Indoor Workflow
 
@@ -80,8 +84,8 @@ Ground truth is provided by MoCap (/vrpn_client_node/unitree_b1/pose).
 - Ouster: Use directly.  
 
 ### 2.2 Run SLAM
-Run Faster-LIO, or other baselines with the converted inputs.
-Excepted GLIM which work directly with PointCloud2.
+- Run Fast_lio2, or other Fast_lio families with the converted inputs.
+- Excepted GLIM which work directly with PointCloud2.
 
 ### 2.3 Record Outputs
 Record both SLAM and ground truth:
@@ -93,8 +97,8 @@ rosbag record /odometry /vrpn_client_node/unitree_b1/pose
 
 ## 3) Trajectory Export
 
-Use the helper script scripts/bag_tools/bag_tum.py to export TUM trajectories.
-Run this on the rosbag you recorded during SLAM (not the raw dataset bag):
+- Use the helper script scripts/bag_tools/bag_tum.py to export TUM trajectories.
+- Run this on the rosbag you recorded during SLAM (not the raw dataset bag):
 
 Advanced CLI usage:
 
