@@ -22,9 +22,12 @@ rosrun gnss2odom_converter gnss2odom.py
 ---
 
 ### 1.2 Livox PointCloud Conversion
+
+**Note:**
+Costumed Conversion package is provided in a separate repo:[pointcloud2_to_custommsg_converter](https://github.com/mawuto/pointcloud2_to_custommsg_converter)
+
 - The **FAST-LIO family** requires livox_ros_driver/CustomMsg for **Avia** and **Mid-360**.
-- Costumed Conversion package is provided in a separate repo: [link to be added])
-- Convert sensor_msgs/PointCloud2 → CustomMsg for **Avia** and **Mid-360**:
+- Convert sensor_msgs/PointCloud2 → CustomMsg for **Avia** and **Mid-360**.
 
 ```bash
 roslaunch pointcloud2_to_custommsg_converter converter.launch
@@ -32,7 +35,6 @@ roslaunch pointcloud2_to_custommsg_converter converter.launch
 
 **Note:**
 - Ouster: Use pointcloud2 directly.
---
 
 ### 1.3 Run SLAM
 
