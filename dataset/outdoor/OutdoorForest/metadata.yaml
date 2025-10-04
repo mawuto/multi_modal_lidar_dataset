@@ -1,0 +1,24 @@
+ground_truth: GNSS-RTK
+notes:
+- PTP sync used
+- Avia lacks per-point timestamps
+- Mid-360 has per-point timestamps
+
+topics:
+
+- /avia/livox/imu (200 Hz)
+- /avia/livox/lidar(100 Hz)
+- /mid360/livox/imu (200 Hz)
+- /mid360/livox/lidar (100 hz)
+- /ouster/imu (125 Hz)
+- /ouster/points (10 Hz)
+- /gnss
+- /gnss_pose
+- /imu/data
+- /imu/mag
+- /ouster/nearir_image
+- /ouster/range_image
+- /ouster/reflec_image
+- /ouster/signal_image
+- /tf
+

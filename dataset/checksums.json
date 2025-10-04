@@ -13,5 +13,8 @@
   },
   "dataset/outdoor/OutdoorRoad-cut1/OutdoorRoad_cut1.bag": {
     "sha256": "75086390002340c013f1ca8fa02062522f2af286c3f479377850a85cda475799"
+  },
+  "dataset/outdoor/OutdoorForest/Outdoor_Forest_dataset.bag": {
+    "sha256": "6f4bd87761354cb53c958590d82d920129089bbe631da834fdc47ca5a36a99b0"
   }
 }
