@@ -22,14 +22,55 @@ Robot and sensors setup:
 
 **Dataset Download (Baidu Netdisk):**
 
-| Dataset Name              | Description                  | Download Link                                                                 | Password | Size    |
-|----------------------------|------------------------------|-------------------------------------------------------------------------------|----------|---------|
-| IndoorOffice1_dataset.bag  | Indoor office environment 1  | [Link](https://pan.baidu.com/s/1sAiaXva7OY0z7ILK0nIv1w)                       | `ec2t`   | 4.47GB  |
-| IndoorOffice2_dataset.bag  | Indoor office environment 2  | [Link](https://pan.baidu.com/s/1g64HCeztEmPRc-rdee_oew)                       | `5yxp`   | 6.46GB  |
-| OutdoorRoad_dataset.bag    | Long structured road scene   | [Link](https://pan.baidu.com/s/1O7MBU-5u8taKWxgpxwJJwQ)                       | `uk1e`   | 44.48GB |
-| OutdoorRoad_cut0.bag       | Road scene (first segment)   | [Link](https://pan.baidu.com/s/1D3BiAND8qwbKwoCiSFW0sA)                       | `eyu9`   | 4.47GB  |
-| OutdoorRoad_cut1.bag       | Road scene (second segment)  | [Link](https://pan.baidu.com/s/1np_ye1Wt1Sucwv5JamCvmA)                       | `6xsa`   | 3.07GB  |
-| Outdoor_Forest_dataset.bag | Forest / vegetation-rich env | [Link](https://pan.baidu.com/s/15V13tQ_k_ukbimko7NR99w)                       | `isev`   | 23.59GB |
+<table>
+  <thead>
+    <tr>
+      <th>Sequence</th>
+      <th>Size</th>
+      <th>Download</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IndoorOffice1</td>
+      <td>4.47&nbsp;GB</td>
+      <td><a href="https://pan.baidu.com/s/1sAiaXva7OY0z7ILK0nIv1w">Baidu</a> (pwd: <code>ec2t</code>)</td>
+      <td>Indoor office environment 1.</td>
+    </tr>
+    <tr>
+      <td>IndoorOffice2</td>
+      <td>6.46&nbsp;GB</td>
+      <td><a href="https://pan.baidu.com/s/1g64HCeztEmPRc-rdee_oew">Baidu</a> (pwd: <code>5yxp</code>)</td>
+      <td>Indoor office environment 2.</td>
+    </tr>
+    <tr>
+      <td>OutdoorRoad</td>
+      <td>44.48&nbsp;GB</td>
+      <td><a href="https://pan.baidu.com/s/1O7MBU-5u8taKWxgpxwJJwQ">Baidu</a> (pwd: <code>uk1e</code>)</td>
+      <td>Long structured road scene.</td>
+    </tr>
+    <tr>
+      <td>OutdoorRoad_cut0</td>
+      <td>4.47&nbsp;GB</td>
+      <td><a href="https://pan.baidu.com/s/1D3BiAND8qwbKwoCiSFW0sA">Baidu</a> (pwd: <code>eyu9</code>)</td>
+      <td>Road scene (first segment) .</td>
+    </tr>
+    <tr>
+      <td>OutdoorRoad_cut1</td>
+      <td>3.07&nbsp;GB</td>
+      <td><a href="https://pan.baidu.com/s/1np_ye1Wt1Sucwv5JamCvmA">Baidu</a> (pwd: <code>6xsa</code>)</td>
+      <td>Road scene (second segment).</td>
+    </tr>
+    <tr>
+      <td>OutdoorForest</td>
+      <td>23.59&nbsp;GB</td>
+      <td><a href="https://pan.baidu.com/s/15V13tQ_k_ukbimko7NR99w">Baidu</a> (pwd: <code>isev</code>)</td>
+      <td>Off-road forest trail with foliage—more degenerate geometry for LiDAR.</td>
+    </tr>
+  </tbody>
+</table>
+
 ---
 
 ## 3) Verify Dataset Integrity
@@ -41,6 +82,7 @@ Robot and sensors setup:
    - OutdoorRoad → `dataset/outdoor/OutdoorRoad/`
    - OutdoorRoad-cut0 → `dataset/outdoor/OutdoorRoad-cut0/`
    - OutdoorRoad-cut1 → `dataset/outdoor/OutdoorRoad-cut1/`
+   - OutdoorForest → `dataset/outdoor/OutdoorForest/`
 3. Run verification (example for IndoorOffice1):
    ```bash
    cd dataset/indoor/IndoorOffice1
@@ -66,78 +108,122 @@ dataset/
     OutdoorRoad/
     OutdoorRoad-cut0/
     OutdoorRoad-cut1/
+    OutdoorForest/
 ```
 ---
 
 ## 5) ROS Topics
 
-### IndoorOffice1 (4.47GB)
-
-| Topic                                | #Msgs  | Type                       |
-|--------------------------------------|--------|----------------------------|
-| /avia/livox/imu                      | 13,461 | sensor_msgs/Imu            |
-| /avia/livox/lidar                    |    662 | sensor_msgs/PointCloud2    |
-| /mid360/livox/imu                    | 13,212 | sensor_msgs/Imu            |
-| /mid360/livox/lidar                  |    660 | sensor_msgs/PointCloud2    |
-| /ouster/imu                          |  8,257 | sensor_msgs/Imu            |
-| /ouster/points                       |    661 | sensor_msgs/PointCloud2    |
-| /vrpn_client_node/unitree_b1/pose    |  7,664 | geometry_msgs/PoseStamped  |
-
----
-
-### IndoorOffice2 (6.46GB)
-
-| Topic                                | #Msgs  | Type                       |
-|--------------------------------------|--------|----------------------------|
-| /avia/livox/imu                      | 19,449 | sensor_msgs/Imu            |
-| /avia/livox/lidar                    |    957 | sensor_msgs/PointCloud2    |
-| /mid360/livox/imu                    | 19,124 | sensor_msgs/Imu            |
-| /mid360/livox/lidar                  |    957 | sensor_msgs/PointCloud2    |
-| /ouster/imu                          | 11,939 | sensor_msgs/Imu            |
-| /ouster/points                       |    955 | sensor_msgs/PointCloud2    |
-| /vrpn_client_node/unitree_b1/pose    |  8,513 | geometry_msgs/PoseStamped  |
-
----
-
-### OutdoorRoad (44.48GB)
-
-| Topic               | #Msgs   | Type                      |
-|---------------------|---------|---------------------------|
-| /avia/livox/imu     | 133,719 | sensor_msgs/Imu           |
-| /avia/livox/lidar   |   6,573 | sensor_msgs/PointCloud2   |
-| /gnss_pose          |  65,732 | geometry_msgs/PoseStamped |
-| /mid360/livox/imu   | 131,462 | sensor_msgs/Imu           |
-| /mid360/livox/lidar |   6,573 | sensor_msgs/PointCloud2   |
-| /ouster/imu         |  82,162 | sensor_msgs/Imu           |
-| /ouster/points      |   6,573 | sensor_msgs/PointCloud2   |
+<div style="display:flex; gap:1rem; flex-wrap:wrap;">
+  <div style="flex:1; min-width:320px;">
+    <h4>IndoorOffice1 (4.47GB)</h4>
+    <table>
+      <thead><tr><th>Topic</th><th>#Msgs</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>/avia/livox/imu</td><td>13,461</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/avia/livox/lidar</td><td>662</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/mid360/livox/imu</td><td>13,212</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/mid360/livox/lidar</td><td>660</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/ouster/imu</td><td>8,257</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/ouster/points</td><td>661</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/vrpn_client_node/unitree_b1/pose</td><td>7,664</td><td>geometry_msgs/PoseStamped</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="flex:1; min-width:320px;">
+    <h4>IndoorOffice2 (6.46GB)</h4>
+    <table>
+      <thead><tr><th>Topic</th><th>#Msgs</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>/avia/livox/imu</td><td>19,449</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/avia/livox/lidar</td><td>957</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/mid360/livox/imu</td><td>19,124</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/mid360/livox/lidar</td><td>957</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/ouster/imu</td><td>11,939</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/ouster/points</td><td>955</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/vrpn_client_node/unitree_b1/pose</td><td>8,513</td><td>geometry_msgs/PoseStamped</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 ---
 
-### OutdoorRoad_cut0 (4.47GB)
-
-| Topic               | #Msgs  | Type                      |
-|---------------------|--------|---------------------------|
-| /avia/livox/imu     | 13,429 | sensor_msgs/Imu           |
-| /avia/livox/lidar   |    660 | sensor_msgs/PointCloud2   |
-| /gnss_pose          |  6,602 | geometry_msgs/PoseStamped |
-| /mid360/livox/imu   | 13,200 | sensor_msgs/Imu           |
-| /mid360/livox/lidar |    660 | sensor_msgs/PointCloud2   |
-| /ouster/imu         |  8,249 | sensor_msgs/Imu           |
-| /ouster/points      |    660 | sensor_msgs/PointCloud2   |
+<div style="display:flex; gap:1rem; flex-wrap:wrap;">
+  <div style="flex:1; min-width:320px;">
+    <h4>OutdoorRoad (44.48GB)</h4>
+    <table>
+      <thead><tr><th>Topic</th><th>#Msgs</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>/avia/livox/imu</td><td>133,719</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/avia/livox/lidar</td><td>6,573</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/gnss_pose</td><td>65,732</td><td>geometry_msgs/PoseStamped</td></tr>
+        <tr><td>/mid360/livox/imu</td><td>131,462</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/mid360/livox/lidar</td><td>6,573</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/ouster/imu</td><td>82,162</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/ouster/points</td><td>6,573</td><td>sensor_msgs/PointCloud2</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="flex:1; min-width:320px;">
+    <h4>OutdoorForest (23.59GB)</h4>
+    <table>
+      <thead><tr><th>Topic</th><th>#Msgs</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>/avia/livox/imu</td><td>61,834</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/avia/livox/lidar</td><td>30,410</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/gnss</td><td>1,216</td><td>sensor_msgs/NavSatFix</td></tr>
+        <tr><td>/gnss_pose</td><td>30,410</td><td>geometry_msgs/PoseStamped</td></tr>
+        <tr><td>/imu/data</td><td>30,410</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/imu/mag</td><td>30,410</td><td>sensor_msgs/MagneticField</td></tr>
+        <tr><td>/mid360/livox/imu</td><td>60,819</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/mid360/livox/lidar</td><td>30,410</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/ouster/imu</td><td>38,012</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/ouster/nearir_image</td><td>3,041</td><td>sensor_msgs/Image</td></tr>
+        <tr><td>/ouster/points</td><td>3,041</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/ouster/range_image</td><td>3,041</td><td>sensor_msgs/Image</td></tr>
+        <tr><td>/ouster/reflec_image</td><td>3,041</td><td>sensor_msgs/Image</td></tr>
+        <tr><td>/ouster/signal_image</td><td>3,041</td><td>sensor_msgs/Image</td></tr>
+        <tr><td>/tf</td><td>71,463</td><td>tf2_msgs/TFMessage</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 ---
 
-### OutdoorRoad_cut1 (3.07GB)
-
-| Topic               | #Msgs | Type                      |
-|---------------------|-------|---------------------------|
-| /avia/livox/imu     | 9,214 | sensor_msgs/Imu           |
-| /avia/livox/lidar   |   453 | sensor_msgs/PointCloud2   |
-| /gnss_pose          | 4,528 | geometry_msgs/PoseStamped |
-| /mid360/livox/imu   | 9,055 | sensor_msgs/Imu           |
-| /mid360/livox/lidar |   453 | sensor_msgs/PointCloud2   |
-| /ouster/imu         | 5,659 | sensor_msgs/Imu           |
-| /ouster/points      |   453 | sensor_msgs/PointCloud2   |
+<div style="display:flex; gap:1rem; flex-wrap:wrap;">
+  <div style="flex:1; min-width:320px;">
+    <h4>OutdoorRoad_cut0 (4.47GB)</h4>
+    <table>
+      <thead><tr><th>Topic</th><th>#Msgs</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>/avia/livox/imu</td><td>13,429</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/avia/livox/lidar</td><td>660</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/gnss_pose</td><td>6,602</td><td>geometry_msgs/PoseStamped</td></tr>
+        <tr><td>/mid360/livox/imu</td><td>13,200</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/mid360/livox/lidar</td><td>660</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/ouster/imu</td><td>8,249</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/ouster/points</td><td>660</td><td>sensor_msgs/PointCloud2</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="flex:1; min-width:320px;">
+    <h4>OutdoorRoad_cut1 (3.07GB)</h4>
+    <table>
+      <thead><tr><th>Topic</th><th>#Msgs</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>/avia/livox/imu</td><td>9,214</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/avia/livox/lidar</td><td>453</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/gnss_pose</td><td>4,528</td><td>geometry_msgs/PoseStamped</td></tr>
+        <tr><td>/mid360/livox/imu</td><td>9,055</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/mid360/livox/lidar</td><td>453</td><td>sensor_msgs/PointCloud2</td></tr>
+        <tr><td>/ouster/imu</td><td>5,659</td><td>sensor_msgs/Imu</td></tr>
+        <tr><td>/ouster/points</td><td>453</td><td>sensor_msgs/PointCloud2</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 ---
 
@@ -149,12 +235,18 @@ dataset/
 ---
 
 ### Sensor Frequency Notes
-- `/ouster/points`: ~10 Hz  
-- `/ouster/imu`: ~100 Hz  
-- `/avia/livox/lidar`: 10 Hz  
-- `/avia/livox/imu`: ~200 Hz  
-- `/mid360/livox/lidar`: 10 Hz  
-- `/mid360/livox/imu`: ~200 Hz  
+
+| Topic               | IndoorOffice1/2 | OutdoorRoad | OutdoorForest |
+|----------------------|-----------------|-------------|---------------|
+| `/ouster/points`    | ~10 Hz          | ~10 Hz      | ~10 Hz        |
+| `/ouster/imu`       | ~100 Hz         | ~100 Hz     | ~125 Hz       |
+| `/avia/livox/lidar` | 10 Hz           | 10 Hz       | **100 Hz**    |
+| `/avia/livox/imu`   | ~200 Hz         | ~200 Hz     | ~200 Hz       |
+| `/mid360/livox/lidar` | 10 Hz         | 10 Hz       | **100 Hz**    |
+| `/mid360/livox/imu` | ~200 Hz         | ~200 Hz     | ~200 Hz       |
+
+> **Note:** In OutdoorForest, Avia and Mid360 LiDARs run at **100 Hz** (denser stream) instead of 10 Hz.  
+> The Ouster IMU also runs slightly faster (~125 Hz vs ~100 Hz).
 ---
 
 ## 6) Processing & Reproduction Pipelines
