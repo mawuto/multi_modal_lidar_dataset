@@ -22,54 +22,15 @@ Robot and sensors setup:
 
 **Dataset Download (Baidu Netdisk):**
 
-<table>
-  <thead>
-    <tr>
-      <th>Sequence</th>
-      <th>Size</th>
-      <th>Download</th>
-      <th>Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>IndoorOffice1</td>
-      <td>4.47&nbsp;GB</td>
-      <td><a href="https://pan.baidu.com/s/1sAiaXva7OY0z7ILK0nIv1w">Baidu</a> (pwd: <code>ec2t</code>)</td>
-      <td>Indoor office environment 1.</td>
-    </tr>
-    <tr>
-      <td>IndoorOffice2</td>
-      <td>6.46&nbsp;GB</td>
-      <td><a href="https://pan.baidu.com/s/1g64HCeztEmPRc-rdee_oew">Baidu</a> (pwd: <code>5yxp</code>)</td>
-      <td>Indoor office environment 2.</td>
-    </tr>
-    <tr>
-      <td>OutdoorRoad</td>
-      <td>44.48&nbsp;GB</td>
-      <td><a href="https://pan.baidu.com/s/1O7MBU-5u8taKWxgpxwJJwQ">Baidu</a> (pwd: <code>uk1e</code>)</td>
-      <td>Long structured road scene.</td>
-    </tr>
-    <tr>
-      <td>OutdoorRoad_cut0</td>
-      <td>4.47&nbsp;GB</td>
-      <td><a href="https://pan.baidu.com/s/1D3BiAND8qwbKwoCiSFW0sA">Baidu</a> (pwd: <code>eyu9</code>)</td>
-      <td>Road scene (first segment) .</td>
-    </tr>
-    <tr>
-      <td>OutdoorRoad_cut1</td>
-      <td>3.07&nbsp;GB</td>
-      <td><a href="https://pan.baidu.com/s/1np_ye1Wt1Sucwv5JamCvmA">Baidu</a> (pwd: <code>6xsa</code>)</td>
-      <td>Road scene (second segment).</td>
-    </tr>
-    <tr>
-      <td>OutdoorForest</td>
-      <td>23.59&nbsp;GB</td>
-      <td><a href="https://pan.baidu.com/s/15V13tQ_k_ukbimko7NR99w">Baidu</a> (pwd: <code>isev</code>)</td>
-      <td>Off-road forest trail with foliage—more degenerate geometry for LiDAR.</td>
-    </tr>
-  </tbody>
-</table>
+
+| Sequence           | Size    | Download                                                                 | Password | Notes                                                  |
+|--------------------|---------|--------------------------------------------------------------------------|----------|--------------------------------------------------------|
+| IndoorOffice1      | 4.47 GB | [Baidu](https://pan.baidu.com/s/1sAiaXva7OY0z7ILK0nIv1w)                 | `ec2t`   | Indoor office environment 1.                          |
+| IndoorOffice2      | 6.46 GB | [Baidu](https://pan.baidu.com/s/1g64HCeztEmPRc-rdee_oew)                 | `5yxp`   | Indoor office environment 2.                          |
+| OutdoorRoad        | 44.48 GB| [Baidu](https://pan.baidu.com/s/1O7MBU-5u8taKWxgpxwJJwQ)                 | `uk1e`   | Long structured road scene.                           |
+| OutdoorRoad_cut0   | 4.47 GB | [Baidu](https://pan.baidu.com/s/1D3BiAND8qwbKwoCiSFW0sA)                 | `eyu9`   | Road scene (first segment).                           |
+| OutdoorRoad_cut1   | 3.07 GB | [Baidu](https://pan.baidu.com/s/1np_ye1Wt1Sucwv5JamCvmA)                 | `6xsa`   | Road scene (second segment).                          |
+| OutdoorForest      | 23.59 GB| [Baidu](https://pan.baidu.com/s/15V13tQ_k_ukbimko7NR99w)                 | `isev`   | Off-road forest trail with foliage — degenerate geometry for LiDAR. |
 
 ---
 
