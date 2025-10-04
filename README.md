@@ -152,20 +152,6 @@ dataset/
 <table width="100%"><tr>
 <td width="50%" valign="top">
 
-<b>OutdoorRoad (44.48GB)</b>
-<table>
-<tr><th>Topic</th><th>#Msgs</th><th>Type</th></tr>
-<tr><td>/avia/livox/imu</td><td>133,719</td><td>sensor_msgs/Imu</td></tr>
-<tr><td>/avia/livox/lidar</td><td>6,573</td><td>sensor_msgs/PointCloud2</td></tr>
-<tr><td>/gnss_pose</td><td>65,732</td><td>geometry_msgs/PoseStamped</td></tr>
-<tr><td>/mid360/livox/imu</td><td>131,462</td><td>sensor_msgs/Imu</td></tr>
-<tr><td>/mid360/livox/lidar</td><td>6,573</td><td>sensor_msgs/PointCloud2</td></tr>
-<tr><td>/ouster/imu</td><td>82,162</td><td>sensor_msgs/Imu</td></tr>
-<tr><td>/ouster/points</td><td>6,573</td><td>sensor_msgs/PointCloud2</td></tr>
-</table>
-
-</td><td width="50%" valign="top">
-
 <b>OutdoorForest (23.59GB)</b>
 <table>
 <tr><th>Topic</th><th>#Msgs</th><th>Type</th></tr>
@@ -184,6 +170,20 @@ dataset/
 <tr><td>/ouster/reflec_image</td><td>3,041</td><td>sensor_msgs/Image</td></tr>
 <tr><td>/ouster/signal_image</td><td>3,041</td><td>sensor_msgs/Image</td></tr>
 <tr><td>/tf</td><td>71,463</td><td>tf2_msgs/TFMessage</td></tr>
+</table>
+
+</td><td width="50%" valign="top">
+
+<b>OutdoorRoad (44.48GB)</b>
+<table>
+<tr><th>Topic</th><th>#Msgs</th><th>Type</th></tr>
+<tr><td>/avia/livox/imu</td><td>133,719</td><td>sensor_msgs/Imu</td></tr>
+<tr><td>/avia/livox/lidar</td><td>6,573</td><td>sensor_msgs/PointCloud2</td></tr>
+<tr><td>/gnss_pose</td><td>65,732</td><td>geometry_msgs/PoseStamped</td></tr>
+<tr><td>/mid360/livox/imu</td><td>131,462</td><td>sensor_msgs/Imu</td></tr>
+<tr><td>/mid360/livox/lidar</td><td>6,573</td><td>sensor_msgs/PointCloud2</td></tr>
+<tr><td>/ouster/imu</td><td>82,162</td><td>sensor_msgs/Imu</td></tr>
+<tr><td>/ouster/points</td><td>6,573</td><td>sensor_msgs/PointCloud2</td></tr>
 </table>
 
 </td>
