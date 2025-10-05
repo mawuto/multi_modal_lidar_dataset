@@ -282,6 +282,7 @@ Indoor and outdoor designated ground-truth paths of all the collected data seque
 
 <p align="center">
   <img src="docs/pipelines/img/Glim_outdoor.png" alt="GLIM" width="45%"/>
+  <img src="docs/pipelines/img/Fast_lio2_OutForest.png" alt="FAST-LIO2" width="45%"/>
 </p>
 ---
 
