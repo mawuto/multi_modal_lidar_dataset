@@ -25,7 +25,7 @@ Robot and sensors setup:
 
 | Sequence           | Size    | Download                                                                 | Password | Notes                                                  |
 |--------------------|---------|--------------------------------------------------------------------------|----------|--------------------------------------------------------|
-| IndoorOffice1      | 4.47 GB | [Baidu](https://pan.baidu.com/s/1sAiaXva7OY0z7ILK0nIv1w)                 | `ec2t`   | Indoor office environment 1.                          |
+| IndoorOffice1      | 4.47 GB | [Baidu](https://pan.baidu.com/s/1sAiaXva7OY0z7ILK0nIv1w) (pwrd:`ec2t` )               | `ec2t`   | Indoor office environment 1.                          |
 | IndoorOffice2      | 6.46 GB | [Baidu](https://pan.baidu.com/s/1g64HCeztEmPRc-rdee_oew)                 | `5yxp`   | Indoor office environment 2.                          |
 | OutdoorRoad        | 44.48 GB| [Baidu](https://pan.baidu.com/s/1O7MBU-5u8taKWxgpxwJJwQ)                 | `uk1e`   | Long structured road scene.                           |
 | OutdoorRoad_cut0   | 4.47 GB | [Baidu](https://pan.baidu.com/s/1D3BiAND8qwbKwoCiSFW0sA)                 | `eyu9`   | Road scene (first segment).                           |
