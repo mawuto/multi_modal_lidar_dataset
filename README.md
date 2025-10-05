@@ -12,10 +12,23 @@ This repository hosts **documentation, download links, and baseline code** for a
 ### 1) Data Collection Platform
 Robot and sensors setup:
 
-<p align="center">
-  <img src="docs/pipelines/img/data_collection_platform.png" alt="Platform" width="48%"/>
-  <img src="docs/pipelines/img/data_collection_platform_calibration.png" alt="Calibration" width="48%"/>
-</p>
+
+<div align="center">
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="docs/pipelines/img/data_collection_platform.png" alt="Platform" height="260"><br>
+      <em>Data Collection Platform</em>
+    </td>
+    <td width="50%">
+      <img src="docs/pipelines/img/data_collection_platform_calibration.png" alt="Calibration" height="260"><br>
+      <em>Calibration Setup</em>
+    </td>
+  </tr>
+</table>
+
+</div>
 
 ---
 ## 2) Quick Links
