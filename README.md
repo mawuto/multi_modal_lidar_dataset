@@ -270,21 +270,19 @@ Indoor and outdoor designated ground-truth paths of all the collected data seque
 ---
 
 ### Example Outdoor SLAM Runs
-<p align="center">
-  <img src="docs/pipelines/img/Faster_lio.png" alt="Faster-LIO" width="45%"/>
-  <img src="docs/pipelines/img/Fast_lio_sam_outdoor.png" alt="FAST-LIO-SAM" width="45%"/>
-</p>
 
-<p align="center">
-  <img src="docs/pipelines/img/S_fast_lio_outdoor.png" alt="S-FAST-LIO" width="45%"/>
-  <img src="docs/pipelines/img/Fast_lio2_outdoor.png" alt="FAST-LIO2" width="45%"/>
-</p>
-
-<p align="center">
-  <img src="docs/pipelines/img/Glim_outdoor.png" alt="GLIM" width="45%"/>
-  <img src="docs/pipelines/img/Fast_lio2_OutdoorForest.png" alt="FAST-LIO2" width="45%"/>
-</p>
----
+<table>
+  <tr>
+    <td width="33%"><img src="docs/pipelines/img/Faster_lio.png" alt="Faster-LIO" height="220"><div align="center"><sub>Faster-LIO</sub></div></td>
+    <td width="33%"><img src="docs/pipelines/img/Fast_lio_sam_outdoor.png" alt="FAST-LIO-SAM" height="220"><div align="center"><sub>FAST-LIO-SAM</sub></div></td>
+    <td width="33%"><img src="docs/pipelines/img/S_fast_lio_outdoor.png" alt="S-FAST-LIO" height="220"><div align="center"><sub>S-FAST-LIO</sub></div></td>
+  </tr>
+  <tr>
+    <td width="33%"><img src="docs/pipelines/img/Fast_lio2_outdoor.png" alt="FAST-LIO2 (Road)" height="220"><div align="center"><sub>FAST-LIO2 (Road)</sub></div></td>
+    <td width="33%"><img src="docs/pipelines/img/Glim_outdoor.png" alt="GLIM" height="220"><div align="center"><sub>GLIM</sub></div></td>
+    <td width="33%"><img src="docs/pipelines/img/Fast_lio2_OutdoorForest.png" alt="FAST-LIO2 (Forest)" height="220"><div align="center"><sub>FAST-LIO2 (Forest)</sub></div></td>
+  </tr>
+</table>
 
 ## 10) Contact
 
